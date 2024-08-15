@@ -1,0 +1,6 @@
+- from: /zheary
+  to: https://zheary.com
+- from: /twitter/:slug? # Match Zero or one ex. /twitter /twitter/thewdhanat
+  to: https://twitter.com/:slug
+- from: /github/:slug+ # One or more ex. /github/ThewApp github/ThewApp/vercel-shorturl
+  to: https://github.com/:slug
