@@ -1,40 +1,81 @@
-<!DOCTYPE html>  
-<html lang="zh">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://qin.zh.yuazhi.cn/short.png">
-    <title>Zh的传送门</title>  
-    <style>  
-        body, html {  
-            height: 100%;  
-            margin: 0;  
-            display: flex;  
-            justify-content: center;  
-            align-items: center;  
-            background-color: #f0f0f0; 
-        }  
-  
-        .container {  
-            text-align: center; 
-        }  
-  
-        img {  
-            display: block; 
-            margin: 0 auto; 
-            max-width: 100%;   
-            height: auto; 
-        }  
-  
-        .text-below {  
-            margin-top: 20px; 
-        }  
-    </style>  
-</head>  
-<body>  
-    <div class="container">  
-        <img src="https://qin.zh.yuazhi.cn/short.png" alt="传送机tp"> 
-        <div class="text-below">滋滋，与传送主机的连接已成功</div>  
-    </div>  
-</body>  
+    <title>Zheary的传送门</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0f7fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 90%; /* 调整容器宽度 */
+            margin: auto;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 120px;
+            height: auto;
+        }
+
+        .text-below {
+            margin-top: 25px;
+            font-size: 1.4em; /* 调整字体大小 */
+            color: #00796b;
+            font-weight: bold;
+            white-space: nowrap; /* 强制文本不换行 */
+        }
+
+        footer {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .text-below {
+                font-size: 1.2em;
+                white-space: normal; /* 在小屏幕上允许换行 */
+            }
+
+            footer {
+                font-size: 0.8em;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://qin.zh.yuazhi.cn/short.png" alt="传送机tp">
+        <div class="text-below">滋滋<br>与传送主机的连接已成功</div>
+    </div>
+    <footer>© 2023 - <span id="current-year"></span> Zheary All rights reserved.</footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
 </html>
